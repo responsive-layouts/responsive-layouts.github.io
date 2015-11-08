@@ -1,22 +1,20 @@
 <!DOCTYPE HTML>
 <html lang="PT">
 <head>
-<title>Xmanager</title>
+	<title>Responsive Layouts - Jquery+Bootstrap</title>
+	 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!--BOOTSTRAP THEME MAKE YOUR BOOTWATCH.com-->
+	<link rel="stylesheet" href="css/bootstrap.min.css"></link>
+	<link rel="stylesheet" href="dist/responsive-layouts.css"></link>
 </head>
-<link rel="stylesheet" href="dist/responsive-layouts.css"></link>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></link>
-
-<style>
-
-
-
-</style>
-<body >
-<!-- Fixed navbar -->   
-<header class="topnav">
+<body>
+	<div class="overlay"></div>
+	<!-- Fixed navbar -->   
+	<header class="topnav">
 
       <!-- Static navbar -->
-      <nav class="navbar navbar-default">
+      <nav class="navbar navbar-inverse navbar-fixed-top responsive " style="z-index:90">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -32,6 +30,9 @@
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Contact</a></li>
+              
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -45,30 +46,97 @@
                 </ul>
               </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
-              <li><a href="../navbar-static-top/">Static top</a></li>
-              <li><a href="../navbar-fixed-top/">Fixed top</a></li>
-            </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>
 
 </header>
-<aside class="left"></aside>
-<aside class="right"></aside>
+<aside class="left">
+<header>
+<li class="list-group-item active">
+     <button class="btn btn-default btn-lg" onclick="toggleleft();"><i class="fa fa-remove"></i></button>
+    <div>PANEL 1</div>
+  </li>
+  </header>
+<section>
+<ul class="list-group">  
+  <li class="list-group-item">
+    <span class="badge">2</span>
+     LISTA 1
+  </li>
+ 
+</ul>
+</section>
+</aside>
+<aside class="right">
+<header>
+<li class="list-group-item active">
+    <button class="btn btn-default btn-lg" onclick="toggleright();"><i class="fa fa-remove"></i></button>
+    <div >PANEL 2</div>
+  </li>
+  </header>
+<section> 
+<div  class="container-fluid">
+<form class="form-horizontal">
+  <fieldset>
+    <legend>FORM 1</legend>
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+</div><div style="clear:both"></div>
+</section>
+</aside>
+
 <section class="contents ">
-
-
-
-texto lorem ipsum texto do tipo lorem ipsum serve para um programador ou desenvolverdor escrever algo com sentido
-<h1 align="center"><a class="btn btn-success btn-lg" href="paper">SEE IN ACTION > THEMEWATCH</a></h1>
+<header>
+<li class="list-group-item active" style="background:rgba(0,0,0,0.5)">
+   PANEL 2
+</li>
+  </header>
+	<div class="container-fluid">
+		<div class="jumbotron">
+		  <h1>Wellcome</h1>
+		  <p>This is the very fast layout maker wysiwyg.</p>
+		  <p><a class="btn btn-primary btn-lg" href="http://responsive-layouts.github.io/dist/responsive-layouts.zip">DOWNLOAD NOW (just 28 Kb)/a></p>
+		</div>    
+    <div class="panel-group" id="accordion">
+		<div class="panel panel-primary">
+			<div class="panel-heading"  >
+				<div class="overlay" ></div>
+				<div  class="panel-title">
+					  <a data-toggle="collapse" data-parent="#accordion" href="#collapseGERAL"  >
+					    PANEL <span ><i class="fa fa-minus"></i></span>
+					 </a>
+				</div>
+			</div>
+			<div id="collapseGERAL" class="panel-collapse collapse in">
+				 <div class="panel-body">
+					texto lorem ipsum texto do tipo lorem ipsum serve para um programador ou desenvolverdor escrever algo com sentido
+				  </div>
+			</div>
+		</div>
+	</div>
+	texto lorem ipsum texto do tipo lorem ipsum serve para um programador ou desenvolverdor escrever algo com sentido
+	</div>
 </section>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="dist/responsive-layouts.js"></script>
-
-
+<script>
+ResponsiveLayouts('btn btn-default','<i class="fa fa-angle-right"></i>','<i class="fa fa-angle-left"></i>');
+</script>
 
   
 </body>
