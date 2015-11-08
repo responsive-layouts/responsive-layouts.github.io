@@ -3,64 +3,73 @@
 <head>
 <title>Xmanager</title>
 </head>
+<link rel="stylesheet" href="../dist/responsive-layouts.css"></link>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></link>
+
 <style>
-* {
-  -webkit-border-radius: 0 !important;
-     -moz-border-radius: 0 !important;
-          border-radius: 0 !important;
-}
-.top_nav
-{
-background:#000;
-height:50px;
-position:fixed;
-width:100%;
-top:0px;
-}
-.left_col
-{
-background:#fff;
-height:100%;
-position:fixed;
-width:20%;
-top:50px;
-left:0px
-}
-.right_col
-{
-background:#fff;
-height:100%;
-position:fixed;
-width:20%;
-right:0px;
-top:50px;
-}
-.content
-{
-background:#f08;
-height:100%;
-position:fixed;
-width:60%;
-left:20%;
-border:2px solid #000;
-}
+
+
+
 </style>
-<body style="margin:0;padding-top:50px;background:#f04;position:relative;height:100%">
+<body >
 <!-- Fixed navbar -->   
-<div class="top_nav">
+<header class="topnav">
 
-</div>
-<div class="left_col">
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+              <li><a href="../navbar-static-top/">Static top</a></li>
+              <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
 
-</div>
+</header>
+<aside class="left"></aside>
+<aside class="right"></aside>
+<section class="contents ">
 
-<div class="right_col">
 
-</div>
 
-<div class="content">
+texto lorem ipsum texto do tipo lorem ipsum serve para um programador ou desenvolverdor escrever algo com sentido
+</section>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="../dist/responsive-layouts.js"></script>
 
-</div>
+
+
+  
 </body>
 </html>
 	
