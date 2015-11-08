@@ -1,3 +1,7 @@
+# demo
+
+'http://responsive-layouts.github.io'
+
 # responsive-layouts.github.io
 Responsive Layouts Panels
 
@@ -29,6 +33,4 @@ aside.right{backgroun:#fff}
 section.contents{backgroun:#fff}
 ```
 
-# demo
 
-'http://responsive-layouts.github.io'
