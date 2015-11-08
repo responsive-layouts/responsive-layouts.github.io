@@ -1,97 +1,138 @@
-body{
-	margin:0;padding-top:50px;position:relative;height:100%
-	
+body {
+	margin: 0;
+	padding-top: 50px;
+	position: relative;
+	height: 100%;
+	height: 100%
 }
+
 * {
-  -webkit-border-radius: 0 !important;
-     -moz-border-radius: 0 !important;
-          border-radius: 0 !important;
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
 }
-header.topnav
-{
-position:fixed;
-width:100%;
-top:0px;
-z-index:90;
-padding:0px;margin:0px;
-overflow:hidden;
-}
-header.topnav > nav,header.topnav  >.nav,header.topnav > .navbar { margin:0px}
-aside.left
-{
-background:#fff;
-height:100%;
-position:fixed;
-width:20%;
-top:50px;
-left:0px;
-z-index:50;
--webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-aside.right
-{
-background:#fff;
-height:100%;
-position:fixed;
-width:20%;
-right:0px;
-top:50px;
-z-index:50;
--webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-.contents
-{
-background:#f08;
-height:100%;
-position:fixed;
-width:60%;
-left:20%;
-z-index:20;
--webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-aside.left.off
-{
-	left:-20%;
-	
-}aside.right.off
-{
-	right:-20%;
-	
-}
-.contents.hideleft{width:80%;background:#4d4d4d;left:0}
-.contents.hideright{width:80%;background:#4d4d4d}
-.contents.hideright.hideleft{width:100%;background:#4d4d4d;left:0}
 
+header.topnav {
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	z-index: 90;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
 
-@media (max-width: 767px) {
-		aside.right
-{right:-20%;}
+header.topnav>nav, header.topnav>.nav, header.topnav>.navbar {
+	margin: 0px
+}
 
-		aside.left
-{left:-20%;
-	}
-		aside.left.off
-		{
-			left:0%;
-			
-		}
-		aside.right.off
-		{
-			right:0%;
-			
-		}
-		
-		.contents.hideleft{width:80%;background:#4d4d4d;left:20%}
-		.contents.hideright{width:80%;background:#4d4d4d}
-		.contents.hideright.hideleft{width:60%;background:#4d4d4d;left:20%}
-		.contents{width:100%;left:0px;}
+aside.left {
+	background: #fff;
+	height: 100%;
+	position: fixed;
+	width: 20%;
+	top: 50px;
+	left: 0px;
+	z-index: 50;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+aside.right {
+	background: #fff;
+	height: 100%;
+	position: fixed;
+	width: 20%;
+	right: 0px;
+	top: 50px;
+	z-index: 50;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.contents {
+	background: #f08;
+	height: 100%;
+	position: fixed;
+	width: 60%;
+	left: 20%;
+	z-index: 20;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+aside.left.off {
+	left: -20%;
+}
+
+aside.right.off {
+	right: -20%;
+}
+
+.contents.hideleft {
+	width: 80%;
+	background: #4d4d4d;
+	left: 0
+}
+
+.contents.hideright {
+	width: 80%;
+	background: #4d4d4d
+}
+
+.contents.hideright.hideleft {
+	width: 100%;
+	background: #4d4d4d;
+	left: 0
+}
+
+@media
+(
+max-width
+:
+767px)
+{
+aside.right {
+	right: -20%;
+}
+
+aside.left {
+	left: -20%;
+}
+
+aside.left.off {
+	left: 0%;
+}
+
+aside.right.off {
+	right: 0%;
+}
+
+.contents.hideleft {
+	width: 80%;
+	background: #4d4d4d;
+	left: 20%
+}
+
+.contents.hideright {
+	width: 80%;
+	background: #4d4d4d
+}
+
+.contents.hideright.hideleft {
+	width: 60%;
+	background: #4d4d4d;
+	left: 20%
+}
+
+.contents {
+	width: 100%;
+	left: 0px;
+}
 }
