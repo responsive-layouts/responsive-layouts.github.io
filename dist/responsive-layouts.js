@@ -7,8 +7,7 @@ function init() {
 
 	if ($('aside.right').length) {
 		if (!$('.sidebtnright').length) {
-			$('.contents').prepend(
-					'<button class="sidebtnright" style="float:right">Right</button>');
+			$('aside.right').prepend('<button class="sidebtnright">Right</button>');
 		}
 		
 	} else {
@@ -18,7 +17,7 @@ function init() {
 
 	if ($('aside.left').length) {
 		if (!$('.sidebtnleft').length) {
-			$('.contents').prepend('<button class="sidebtnleft" >Left</button>');
+			$('aside.left').prepend('<button class="sidebtnleft" >Left</button>');
 		}
 
 		
@@ -26,10 +25,12 @@ function init() {
 		$('.contents').addClass('hideleft');
 		
 	}
+	
+	
 	$('.sidebtnright').click(function() {
-		if ($(document).width() < 768) {
+		if ($(window).width() < 768) {
 			$('aside.left').removeClass('off');
-
+			$('.sidebtnleft').toggle();
 			$('.contents').removeClass('hideleft');
 			$('.contents').toggleClass('hideright');
 		}
@@ -39,11 +40,12 @@ function init() {
 		$('aside.right').toggleClass('off');
 		
 	});
+	
 	$('.sidebtnleft').click(function() {
-		if ($(document).width() < 768) {
+		if ($(window).width() < 768) {
 			$('aside.right').removeClass('off');
+			$('.sidebtnright').toggle();
 			$('.contents').removeClass('hideright');
-
 			$('.contents').toggleClass('hideleft');
 		}
 		else{
@@ -55,7 +57,7 @@ function init() {
 }
 
 $(window).resize(function() {
-	if ($(document).width() < 768) {
+	if ($(window).width() < 768) {
 
 		if ($('aside.right').length) {
 			$('aside.left').removeClass('off');

@@ -3,7 +3,8 @@ body {
 	padding-top: 50px;
 	position: relative;
 	height: 100%;
-	height: 100%
+	overflow-x: hidden;
+	overflow-y: scroll;
 }
 
 * {
@@ -56,18 +57,32 @@ aside.right {
 
 .contents {
 	background: #f08;
-	height: 100%;
-	position: fixed;
 	width: 60%;
 	left: 20%;
 	z-index: 20;
+	min-height:1200px;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
-	overflow-y:scroll;
+	margin-left:20%;
+}
+.sidebtnleft  {
+	position:absolute;
+	top:0;
+	right:-100px;
+	width:100px;
+	display:block;
+	
 }
 
+.sidebtnright {
+	position:absolute;
+	top:0;
+	left:-100px;
+	display:block;
+	width:100px;
+}
 aside.left.off {
 	left: -20%;
 }
@@ -79,18 +94,19 @@ aside.right.off {
 .contents.hideleft {
 	width: 80%;
 	background: #4d4d4d;
-	left: 0
+	margin-left: 0;
 }
 
 .contents.hideright {
 	width: 80%;
-	background: #4d4d4d
+	background: #4d4d4d;
+	margin-left:20%;
 }
 
 .contents.hideright.hideleft {
 	width: 100%;
 	background: #4d4d4d;
-	left: 0
+	margin-left: 0;
 }
 
 @media(max-width:767px){
@@ -117,23 +133,23 @@ aside.right.off {
 .contents.hideleft {
 	width: 100%;
 	background: #4d4d4d;
-	left: 80%;
+	margin-left: 80%;
 }
 
 .contents.hideright {
 	width: 100%;
 	background: #4d4d4d;
-	left: -80%;
+	margin-left: -80%;
 }
 
 .contents.hideright.hideleft {
 	width: 100%;
 	background: #4d4d4d;
-	left: 0;
+	margin-left: 0;
 }
 
 .contents {
 	width: 100%;
-	left: 0px;
+	margin-left: 0px;
 }
 }
