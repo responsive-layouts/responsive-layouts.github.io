@@ -6,43 +6,73 @@ function init() {
 	}
 
 	if ($('aside.right').length) {
-		if (!$('#right').length) {
+		if (!$('.sidebtnright').length) {
 			$('.contents').prepend(
-					'<button id="right" style="float:right">Right</button>');
+					'<button class="sidebtnright" style="float:right">Right</button>');
 		}
-		$('#right').click(function() {
-			$('aside.right').toggleClass('off');
-			$('.contents').toggleClass('hideright');
-		});
+		
 	} else {
-
-		if ($(document).width() < 768) {
-
-			$('.contents').removeClass('hideright');
-		} else {
-			$('.contents').addClass('hideright');
-		}
+		$('.contents').addClass('hideright');
+		
 	}
 
 	if ($('aside.left').length) {
-		if (!$('#left').length) {
-			$('.contents').prepend('<button id="left" >Left</button>');
+		if (!$('.sidebtnleft').length) {
+			$('.contents').prepend('<button class="sidebtnleft" >Left</button>');
 		}
 
-		$('#left').click(function() {
-			$('aside.left').toggleClass('off');
-			$('.contents').toggleClass('hideleft');
-		});
+		
 	} else {
+		$('.contents').addClass('hideleft');
+		
+	}
+	$('.sidebtnright').click(function() {
 		if ($(document).width() < 768) {
+			$('aside.left').removeClass('off');
 
 			$('.contents').removeClass('hideleft');
-		} else {
-			$('.contents').addClass('hideleft');
+			$('.contents').toggleClass('hideright');
 		}
-	}
+		else{
+			$('.contents').toggleClass('hideright');
+		}
+		$('aside.right').toggleClass('off');
+		
+	});
+	$('.sidebtnleft').click(function() {
+		if ($(document).width() < 768) {
+			$('aside.right').removeClass('off');
+			$('.contents').removeClass('hideright');
+
+			$('.contents').toggleClass('hideleft');
+		}
+		else{
+			$('.contents').toggleClass('hideleft');
+		}
+		$('aside.left').toggleClass('off');
+		
+	});
 }
+
 $(window).resize(function() {
-	init();
+	if ($(document).width() < 768) {
+
+		if ($('aside.right').length) {
+			$('aside.left').removeClass('off');
+		$('.contents').removeClass('hideright');
+		}
+		else {
+			$('.contents').addClass('hideright');
+		}
+		if ($('aside.left').length) {
+			$('aside.right').removeClass('off');
+			$('.contents').removeClass('hideleft');
+			}
+		else {
+		$('.contents').addClass('hideleft');
+		}
+		
+		
+	}
 });
 init();

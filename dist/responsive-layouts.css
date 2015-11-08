@@ -65,6 +65,7 @@ aside.right {
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
+	overflow-y:scroll;
 }
 
 aside.left.off {
@@ -92,12 +93,7 @@ aside.right.off {
 	left: 0
 }
 
-@media
-(
-max-width
-:
-767px)
-{
+@media(max-width:767px){
 aside.right {
 	right: -20%;
 }
@@ -107,28 +103,33 @@ aside.left {
 }
 
 aside.left.off {
-	left: 0%;
+	left: 0%;	
+	width:80%;
 }
 
 aside.right.off {
 	right: 0%;
+	
+	width:80%;
 }
 
+
 .contents.hideleft {
-	width: 80%;
+	width: 100%;
 	background: #4d4d4d;
-	left: 20%
+	left: 80%;
 }
 
 .contents.hideright {
-	width: 80%;
-	background: #4d4d4d
+	width: 100%;
+	background: #4d4d4d;
+	left: -80%;
 }
 
 .contents.hideright.hideleft {
-	width: 60%;
+	width: 100%;
 	background: #4d4d4d;
-	left: 20%
+	left: 0;
 }
 
 .contents {
