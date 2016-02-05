@@ -6,6 +6,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<!--BOOTSTRAP THEME MAKE YOUR BOOTWATCH.com-->
 	<link rel="stylesheet" href="css/bootstrap.min.css"></link>
+	
+	<link rel="stylesheet" href="css/metismenu.min.css"></link>
+	<link rel="stylesheet" href="css/demo.css"></link>
 	<link rel="stylesheet" href="dist/responsive-layouts.css"></link>
 </head>
 <body>
@@ -66,7 +69,45 @@
   <li class="list-group-item">
      <a href="theme2.html">THEME 2</a>
   </li>
- 
+ <nav class="sidebar-nav">
+					<ul class="metismenu" id="menu">
+						<li class="active"><a href="javascript:void(0);" 	aria-expanded="false">
+								<span class="glyphicon glyphicon-edit"></span>Module 1
+								<span class="glyphicon arrow"></span></a>
+							<ul aria-expanded="true" class="collapse in">
+								<li>
+									<a href="#"><span class="glyphicon glyphicon-file"></span>Link 1</a>
+								</li>
+								<li><a 	href="#"><span class="glyphicon glyphicon-tags"></span> Link 2
+									<span	class="glyphicon arrow"></span>
+									</a>
+									<ul aria-expanded="true" class="collapse ">
+										<li>
+										  <a href="#"><span class="glyphicon glyphicon-file"></span>Link 3</a>
+										</li>
+										<li>
+										</li>
+										<li>
+										  <a href="#"><span class="glyphicon glyphicon-file"></span>Link 4</a>
+										</li>
+										<li></li>
+									</ul></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);" aria-expanded="false">
+							<span class="glyphicon glyphicon-envelope"></span>Module 2
+							<span class="glyphicon arrow"></span></a>
+							<ul aria-expanded="false" class="collapse">
+								<li>
+									 <a href="#"><span class="glyphicon glyphicon-file"></span>Link 3</a>
+								</li>
+								<li>
+									<a href="#"><span class="glyphicon glyphicon-file"></span>Link 3</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
 </ul>
 </section>
 </aside>
@@ -125,12 +166,18 @@
 </style>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/metismenu.min.js"></script>
 <script src="dist/responsive-layouts.js"></script>
 <script>
-ResponsiveLayouts('btn btn-default','<i class="fa fa-angle-right"></i>');
+ResponsiveLayouts('btn btn-default','<i class="fa fa-angle-right"></i>','<i class="fa fa-angle-left"></i>');
 </script>
+<script>
+$( document ).ready(function() {
+	 $('#menu').metisMenu();
+});
 
-  
+
+</script>
 </body>
 </html>
 	
