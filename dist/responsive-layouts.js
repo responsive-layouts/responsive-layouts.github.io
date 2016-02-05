@@ -109,10 +109,13 @@ function ResponsiveLayouts(class_btn, text_left, text_right) {
 function toggleright() {
 	if ($(window).width() < 861) {
 		$('.overlay').toggle();
+		
 		$('aside.left').removeClass('off');
 		$('.sidebtnleft').toggle();
 		$('.contents').removeClass('hideleft');
+		if ($('aside.right').length) {
 		$('.contents').toggleClass('hideright');
+		}
 	} else {
 		$('.contents').toggleClass('hideright');
 	}
@@ -124,7 +127,9 @@ function toggleleft() {
 		$('.overlay').toggle();
 		$('aside.right').removeClass('off');
 		$('.sidebtnright').toggle();
-		$('.contents').removeClass('hideright');
+		if ($('aside.right').length) {
+			$('.contents').toggleClass('hideright');
+			}
 		$('.contents').toggleClass('hideleft');
 	} else {
 		$('.contents').toggleClass('hideleft');
@@ -173,6 +178,7 @@ function verify_width() {
 		$('.sidebtnleft').show();
 		$('.sidebtnright').show();
 		if ($('aside.right').length) {
+			
 			$('aside.left').removeClass('off');
 			$('.contents').removeClass('hideright');
 		} else {
@@ -183,7 +189,13 @@ function verify_width() {
 			$('aside.right').removeClass('off');
 			$('.contents').removeClass('hideleft');
 		} else {
+			if ($('aside.left').hasClass('off')) {
+				
+
+			}
+			else{
 			$('.contents').addClass('hideleft');
+			}
 		}
 
 	}
